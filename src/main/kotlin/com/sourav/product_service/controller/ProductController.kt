@@ -80,7 +80,7 @@ class ProductController(
     }
 
     @DeleteMapping(path = ["/{id}"])
-    fun deleteAllProducts(
+    fun deleteProductsById(
         @PathVariable id: String
     ) {
         val product = productRepository.findById(ObjectId(id)).orElseThrow {
